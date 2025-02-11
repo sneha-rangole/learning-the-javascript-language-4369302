@@ -1,0 +1,102 @@
+Here are simplified notes on JavaScript Strings with examples and HOTS (Higher Order Thinking Skills) questions:  
+
+---
+
+### JavaScript Strings - Simple Notes  
+
+#### 1. What is a String?  
+A string is a sequence of characters used to store text.  
+
+#### 2. Creating Strings  
+You can create strings in three ways:  
+```js
+const str1 = "Hello";  // Double quotes
+const str2 = 'World';  // Single quotes
+const str3 = `Hello, ${str2}!`;  // Backticks (Template Literal)
+```
+👉 Example Output: `"Hello, World!"`
+
+#### 3. Accessing Characters  
+- Using charAt(index) method:
+  ```js
+  "cat".charAt(1); // Output: "a"
+  ```
+- Using bracket notation:
+  ```js
+  "cat"[1]; // Output: "a"
+  ```
+
+#### 4. String Length  
+```js
+const text = "Hello";
+console.log(text.length); // Output: 5
+```
+
+#### 5. String Methods  
+| Method | Description | Example | Output |
+|--------|-------------|---------|--------|
+| `toUpperCase()` | Converts to uppercase | `"hello".toUpperCase()` | `"HELLO"` |
+| `toLowerCase()` | Converts to lowercase | `"WORLD".toLowerCase()` | `"world"` |
+| `concat()` | Joins two strings | `"Hello".concat(" World")` | `"Hello World"` |
+| `indexOf()` | Finds position of text | `"Hello".indexOf("e")` | `1` |
+| `substring()` | Extracts part of a string | `"Hello".substring(1,3)` | `"el"` |
+| `replace()` | Replaces text | `"Hello".replace("H", "Y")` | `"Yello"` |
+| `trim()` | Removes spaces | `"  Hello  ".trim()` | `"Hello"` |
+| `split()` | Converts string to array | `"a,b,c".split(",")` | `["a", "b", "c"]` |
+
+#### 6. Comparing Strings  
+```js
+const a = "apple";
+const b = "banana";
+console.log(a < b); // true (alphabetical order)
+```
+
+#### 7. String Objects vs. Primitives  
+```js
+const strPrimitive = "Hello";  // String primitive
+const strObject = new String("Hello"); // String object
+
+console.log(typeof strPrimitive); // "string"
+console.log(typeof strObject);    // "object"
+```
+⚠ Warning: Avoid using `new String()` because it creates an object instead of a simple string.
+
+---
+
+### HOTS (Higher Order Thinking Skills) Questions  
+
+🔹 Q1: Why does `"Hello"[0] = "H"` not work in JavaScript?  
+✅ Answer: Strings are immutable, meaning you cannot change individual characters directly.
+
+🔹 Q2: What will be the output of the following code?  
+```js
+console.log("10" + 5);
+console.log("10" - 5);
+```
+✅ Answer:  
+- `"10" + 5` → `"105"` (String concatenation)  
+- `"10" - 5` → `5` (JavaScript converts "10" to a number for subtraction)  
+
+🔹 Q3: How can you check if a string contains another string?  
+✅ Answer: Use the `includes()` method:  
+```js
+console.log("JavaScript".includes("Script")); // true
+```
+
+🔹 Q4: How can you extract the last 3 characters of a string?  
+✅ Answer:  
+```js
+const word = "Programming";
+console.log(word.slice(-3)); // "ing"
+```
+
+🔹 Q5: What is the difference between `substring()` and `slice()`?  
+✅ Answer:  
+- `substring(start, end)` does not accept negative indexes.  
+- `slice(start, end)` does accept negative indexes.  
+
+Example:  
+```js
+console.log("Hello".substring(1,3)); // "el"
+console.log("Hello".slice(-3)); // "llo"
+```
