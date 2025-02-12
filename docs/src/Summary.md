@@ -1,0 +1,6 @@
+[Introduction](Var.md)
+[Boolean](Boolean.md)
+[Constants](Const.md)
+[Let Keyword](Let.md)
+[Numbers](Number.md)
+[Strings](String.md)

@@ -1,0 +1,12 @@
+[book]
+title = "Javascript Documentation"
+author = ["Sneha Rangole"]
+description = "Documentation for Javascript"
+language = "en"
+multilingual = false
+src = "src"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/sneha-rangole/learning-the-javascript-language"
